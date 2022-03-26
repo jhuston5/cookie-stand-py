@@ -8,17 +8,18 @@ services:
             - .:/code
         ports:
             - 8000:8000
-        depends_on:
-            - db
-        links:
-            - db
-    db:
-        image: postgres
-        volumes:
-            - postgres_data:/var/lib/postgresql/data/
-        environment:
-            - POSTGRES_DB=${DATABASE_NAME}
-            - POSTGRES_USER=${DATABASE_USER}
-            - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
-volumes:
-    postgres_data:
+
+#         depends_on:
+#             - db
+#         links:
+#             - db
+#     db:
+#         image: postgres
+#         volumes:
+#             - postgres_data:/var/lib/postgresql/data/
+#         environment:
+#             - POSTGRES_DB=${DATABASE_NAME}
+#             - POSTGRES_USER=${DATABASE_USER}
+#             - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+# volumes:
+#     postgres_data:
